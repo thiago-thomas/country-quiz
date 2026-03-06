@@ -1,0 +1,27 @@
+.country-quiz__congrats-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+button.congrats-playAgain {
+  background: var(--pink-gradient);
+  color: #e2e4f3;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+
+  border-radius: 8px;
+  width: 250px;
+  padding: 16px;
+  margin: 16px;
+
+  &:hover {
+    background: linear-gradient(
+      color-mix(in srgb, #e65895 80%, black),
+      color-mix(in srgb, #bc6be8 80%, black)
+    );
+  }
+}
