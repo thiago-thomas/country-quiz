@@ -1,7 +1,11 @@
 import CongratsImg from "../../assets/congrats.png";
 import "./style.css";
+import { Link, useLocation } from 'react-router-dom'; 
 
 export function CongratsPage() {
+  const location = useLocation();
+  const { correctAnswers } = location.state || { correctAnswers: 0 };
+
   return (
     <>
       <div className="country-quiz__main-container congrats-container">
@@ -10,10 +14,12 @@ export function CongratsPage() {
         </div>
         <div className="country-quiz__congrats-main">
           <h1>Congrats! You completed the quiz.</h1>
-          <p>You answer 4/10 correctly</p>
-          <button type="button" className="congrats-playAgain">
-            Play again
-          </button>
+          <p>You answered {correctAnswers}/10 correctly</p>
+          <Link to="/">
+            <button type="button" className="congrats-playAgain">
+              Play again
+            </button>
+          </Link>
         </div>
       </div>
     </>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CorrectIcon from "../../assets/correct-icon.svg";
 import WrongIcon from "../../assets/wrong-icon.svg";
 import "./style.css";
@@ -17,6 +18,7 @@ interface UserAnswer {
 }
 
 export function MainPage() {
+  const navigate = useNavigate();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [userAnswers, setUserAnswers] = useState<(UserAnswer | undefined)[]>(
@@ -122,9 +124,9 @@ export function MainPage() {
       } else {
         setShowResult(true);
       }
-    }, 3000);
+    }, 1500);
   }
-
+  
   function handleFinishQuiz(): void {
     setShowResult(true);
   }
@@ -133,14 +135,7 @@ export function MainPage() {
     const correctAnswers = userAnswers.filter(
       (answer) => answer?.isCorrect,
     ).length;
-    return (
-      <div className="country-quiz__result-container">
-        <h1>Quiz Completed!</h1>
-        <p>
-          You got {correctAnswers} out of {questions.length} correct!
-        </p>
-      </div>
-    );
+    navigate("/congrats", { state: { correctAnswers } });
   }
 
   const currentQ = questions[currentQuestion];

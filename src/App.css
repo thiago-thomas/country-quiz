@@ -110,7 +110,7 @@ h2 {
 
     &.answered,
     &.selected {
-      background: var(--pink-gradient);
+      background: var(--pink-gradient) !important;
     }
   }
 }

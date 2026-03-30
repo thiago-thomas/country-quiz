@@ -16,7 +16,7 @@ button.congrats-playAgain {
   border-radius: 8px;
   width: 250px;
   padding: 16px;
-  margin: 16px;
+  margin: 4px 16px 16px 16px;
 
   &:hover {
     background: linear-gradient(
