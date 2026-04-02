@@ -34,7 +34,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./public/Desktop_1350px.jpg)
 
 This is an interactive country quiz application built with modern React. Users can test their geography knowledge by identifying countries from flags and capitals. The app provides immediate visual feedback, tracks progress through a series of 10 questions, and displays a final score on a congratulations page. The design is fully responsive, adapting to mobile, tablet, and desktop screens.
 
