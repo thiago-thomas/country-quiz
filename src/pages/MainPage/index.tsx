@@ -127,10 +127,6 @@ export function MainPage() {
     }, 1500);
   }
   
-  function handleFinishQuiz(): void {
-    setShowResult(true);
-  }
-
   if (showResult) {
     const correctAnswers = userAnswers.filter(
       (answer) => answer?.isCorrect,
